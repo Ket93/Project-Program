@@ -1,8 +1,24 @@
-const experss = require('express');
+const express = require('express');
 const Joi = require('joi');
+const db = require('./db/db-mysql.js');
 
-const app = experss();
-app.use(experss.json());
+const app = express();
+app.use(express.json());
+
+
+/**testing connecting to the database on my computer
+ * localhost:3306
+ */
+
+app.get('/api/stocks/db', async (req, res)=>{
+    try{
+        let results = await db.all();
+        res.json(results);
+    } catch(err){
+        console.log(err);
+        res.status(500).send("error?")
+    }
+})
 
 
 /** mock data for stock prices, pretend that this is in a database and get updated or whatever 
@@ -23,13 +39,13 @@ const stocks = [
 ]
 
 
+
 //give stock ticker, get info
 app.get('/api/stocks/:ticker', (req, res) =>{
     const stock = stocks.find(c => c.ticker === req.params.ticker);
     if (!stock) res.status(404).send("Not Found");
     res.send(stock);
 })
-
 
 
 
@@ -78,6 +94,8 @@ app.post('/api/courses', (req, res) =>{
     courses.push(course);
     res.send(course);
 });
+
+
 
 //PORT
 const port = process.env.PORT || 3000;
