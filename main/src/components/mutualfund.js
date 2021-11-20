@@ -1,3 +1,4 @@
+import './mutualfund.css';
 import MyButton from './button.js';
 import MyForm from './form.js';
 import mutualfund from ".././images/mutualfund.png";
