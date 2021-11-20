@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+ReactDOM.render(<App />, document.querySelector('#root'))
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
