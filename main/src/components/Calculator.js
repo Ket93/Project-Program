@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from './form.js';
+import Form from './calcform.js';
 import images from '../images/moneystash.png';
 import './Calculator.css';
 
