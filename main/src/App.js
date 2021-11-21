@@ -1,14 +1,29 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MyNavbar from "./components/Navbar/navbar.js";
+import MutualFund from './components/mutualfund.js';
 
 function App() {
+
   return (
-    <div className="App">
-      <div className="heading">
-        <h1>
-          Financial Assistant
-        </h1>
-      </div>
-    </div>
+    <body>
+      <Router>
+
+
+        <div className="App">
+
+          <MyNavbar />
+
+          <Routes>
+            <Route path="/" element={<MutualFund />} />
+          </Routes>
+
+        </div>
+
+      </Router>
+
+
+    </body>
   );
 }
 
