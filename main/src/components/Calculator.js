@@ -1,17 +1,18 @@
 import React from 'react';
 import Form from './form.js';
 import images from '../images/moneystash.png';
+import './Calculator.css';
 
 function Calculator() {
   return (
     <div className="Calculator">
-      <header className="App-header">
+      <h1 className="App-header">
         Financial Calculator 
-      </header>
+      </h1>
       
-      <div style={{ backgroundImage: `url(${images})`, height:"100vh", backgroundRepeat: 'no-repeat'}}>
+      <form style={{backgroundImage: `url(${images})`, height:"100vh", backgroundRepeat: 'no-repeat'}}>
       <Form />
-    </div>
+    </form>
     </div>
   );
 }
