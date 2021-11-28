@@ -25,4 +25,18 @@ stocksdb.all = () =>{
     })
 }
 
+
+stocksdb.one = (id)=>{
+    return new Promise((resolve, reject)=>{
+        pool.query('SELECT * FROM stocks WHERE ticker = ?', [id], (err, results) =>{
+            if (err) { 
+                return reject(err)
+            };
+
+            return resolve(results[0]);//sql thing returns a list of one thing
+
+        })
+    })
+}
+
 module.exports = stocksdb;

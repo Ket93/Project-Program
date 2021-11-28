@@ -11,9 +11,24 @@ trying my best to make this all work out
 
 */
 
+//get info of everything in the database
 app.get('/api/db/stocks', async (req, res)=>{
     try{
         let results = await db.all();
+        console.log(results);
+        res.json(results)
+    }catch(err){
+        console.log(err);
+        res.status(500).send(err);
+    }
+})
+
+
+//get info from one stock in particular
+app.get('/api/db/stocks/:ticker', async (req, res)=>{
+    try{
+        let results = await db.one(req.params.ticker);
+        console.log(results);
         res.json(results)
     }catch(err){
         console.log(err);
