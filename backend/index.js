@@ -37,6 +37,26 @@ app.get('/api/db/stocks/:ticker', async (req, res)=>{
 })
 
 
+app.get('/api/db/stocklist', async (req, res)=>{
+    try{
+        let results = await db.all();
+
+        let ans = [];
+        for (let i = 0; i<results.length; i++){
+            ans.push(results[i].ticker);
+        }
+        console.log(results);
+        res.send(ans);
+    }catch(err){
+        console.log(err);
+        res.status(500).send(err);
+    }
+})
+
+
+
+
+
 /** mock data for stock prices, pretend that this is in a database and get updated or whatever 
 AAPL	149.99	1.43
 TSLA	1033.42	-2.83
