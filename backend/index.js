@@ -1,6 +1,6 @@
 const experss = require('express');
 const Joi = require('joi');
-
+const db = require('./db/dbmysql.js');
 const app = experss();
 app.use(experss.json());
 
@@ -10,6 +10,16 @@ Database part
 trying my best to make this all work out
 
 */
+
+app.get('/api/db/stocks', async (req, res)=>{
+    try{
+        let results = await db.all();
+        res.json(results)
+    }catch(err){
+        console.log(err);
+        res.status(500).send(err);
+    }
+})
 
 
 /** mock data for stock prices, pretend that this is in a database and get updated or whatever 
