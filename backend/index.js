@@ -5,6 +5,13 @@ const app = experss();
 app.use(experss.json());
 
 
+/*
+Database part
+trying my best to make this all work out
+
+*/
+
+
 /** mock data for stock prices, pretend that this is in a database and get updated or whatever 
 AAPL	149.99	1.43
 TSLA	1033.42	-2.83
@@ -21,6 +28,21 @@ const stocks = [
     {ticker: "GOOGL", price: "293.56", yield: "2.00"},
     {ticker: "PG", price: "146.56", yield: "0.16"}
 ]
+
+
+//list of all available stocks in the database
+app.get('/api/stocks/list', (req, res)=>{
+    let ans = []
+    for (let i = 0; i<stocks.length; i++){
+        ans.push(stocks[i].ticker);
+    }
+    res.send(ans);
+})
+
+//all information of all stocks
+app.get('/api/stocks', (req, res)=>{
+    res.send(stocks);
+})
 
 
 //give stock ticker, get info
