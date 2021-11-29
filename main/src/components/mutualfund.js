@@ -59,7 +59,16 @@ function MutualFund() {
 
             <MyForm text="Action" labelStyle={labelStyle} inputStyle={inputStyleAction} type="text" />
             <MyForm text="Quantity" labelStyle={labelStyle} inputStyle={inputStyleQuantity} type="number" />
-            <MyForm text="Company" labelStyle={labelStyle} inputStyle={inputStyleCompany} type="text" />
+
+            <label class="companylabel" for="companies">Company</label>
+            <select name="companies" id="companies">
+                <option value="default" selected disabled hidden>Choose here</option>
+                <option value="bestbuy">Best Buy</option>
+                <option value="apple">Apple</option>
+                <option value="tesla">Tesla</option>
+                <option value="audi">Audi</option>
+            </select>
+
             <MyForm text="Order Type" labelStyle={labelStyle} inputStyle={inputStyleOrder} type="text" />
 
 

@@ -1,9 +1,15 @@
 import React from 'react'
+import './home.css';
+import pic from "../../images/Finance_app-bro.png";
 
 const Home = () => {
     return (
-        <div style={{ display: "flex", justifyContent: "center", height: "10vh" }}>
-            <h1>Financial Assistant</h1>
+        <div>
+
+            <h1 class="title">Financial Assistant</h1>
+
+            <img src={pic} class="titlePic" />
+
         </div>
     )
 }
