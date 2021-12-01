@@ -2,7 +2,10 @@ const experss = require('express');
 const Joi = require('joi');
 const db = require('./db/dbmysql.js');
 const app = experss();
+const cors = require('cors');
+
 app.use(experss.json());
+app.use(cors());
 
 
 /*
@@ -75,7 +78,7 @@ const stocks = [
 ]
 
 
-//list of all available stocks in the database
+//list of all available stocks in the "database"
 app.get('/api/stocks/list', (req, res)=>{
     let ans = []
     for (let i = 0; i<stocks.length; i++){
@@ -102,6 +105,7 @@ app.get('/api/stocks/:ticker', (req, res) =>{
 
 //testing endpoints + tutorial following
 
+/*
 const courses = [
     {id: 1, name:"course1"},
     {id: 2, name:"course2"},
@@ -145,6 +149,7 @@ app.post('/api/courses', (req, res) =>{
     courses.push(course);
     res.send(course);
 });
+*/
 
 //PORT
 const port = process.env.PORT || 4000;
