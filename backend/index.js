@@ -49,7 +49,7 @@ app.get('/api/db/stocklist', async (req, res)=>{
         for (let i = 0; i<results.length; i++){
             ans.push(results[i].ticker);
         }
-        console.log(results);
+        //console.log(results);
         res.send(ans);
     }catch(err){
         //console.log(err);
