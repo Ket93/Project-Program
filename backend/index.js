@@ -8,6 +8,7 @@ app.use(experss.json());
 app.use(cors());
 
 
+
 /*
 Database part
 trying my best to make this all work out
@@ -34,7 +35,7 @@ app.get('/api/db/stocks/:ticker', async (req, res)=>{
         //console.log(results);
         res.json(results)
     }catch(err){
-        console.log(err);
+        //console.log(err);
         res.status(500).send(err);
     }
 })
