@@ -2,7 +2,7 @@
 
 ## **Using SQL database**
 ---
-### Get all stock names
+### Get all stocks
 Returns a list of objects of all stocks with all information.
 * **URL**
 
