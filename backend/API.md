@@ -36,7 +36,7 @@ Returns an object with the information of one stock
 
    **Required:**
 
-   `id=[alphabetical]`
+   `ticker=[alphabetical]`
 
 * **Success Response**
     * Code: 200
@@ -44,6 +44,7 @@ Returns an object with the information of one stock
 
 * **Error Response**
     * Code: 500
+    * Content: `Param :ticker is not found in database`
 
 ---
 

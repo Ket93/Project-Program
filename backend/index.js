@@ -33,7 +33,16 @@ app.get('/api/db/stocks/:ticker', async (req, res)=>{
     try{
         let results = await db.one(req.params.ticker);
         //console.log(results);
-        res.json(results)
+
+        //results is undefined aka sql query did nothing useful
+        if (!results){
+            console.log('this');
+            res.status(500).send('Param :ticker is not found in database');
+            return;
+        }
+        
+
+        res.json(results);
     }catch(err){
         //console.log(err);
         res.status(500).send(err);
