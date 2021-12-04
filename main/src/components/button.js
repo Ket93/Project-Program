@@ -10,4 +10,5 @@ class MyButton extends Component {
     }
 }
 
-export default MyButton;
+export default Mybutton
+
