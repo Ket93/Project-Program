@@ -1,4 +1,3 @@
-
 import React,{ Component } from 'react'
 
 class Mybutton extends Component{
@@ -13,4 +12,3 @@ class Mybutton extends Component{
 }
 
 export default Mybutton
-
