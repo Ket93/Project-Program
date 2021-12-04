@@ -14,7 +14,7 @@ const MyNavbar = () => {
                 <NavMenu>
                     <NavLink to="/">Home</NavLink>
 
-                    <NavLink to="/financial-calculator" activestyle >Financial Calculator</NavLink>
+                    <NavLink to="/calc" activestyle >Financial Calculator</NavLink>
 
                     <NavLink to="/mutual-funds" activestyle>Mutual Funds</NavLink>
 

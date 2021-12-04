@@ -14,6 +14,7 @@ function getVal() {
   const val_assets = document.querySelector('.assetsInput').value;
 
   var FV = val_PV * (1 + val_interest)^val_periods
+  document.querySelector('.result').innerHTML = "Result: "+FV;
 }
 
 function Calculator() {
@@ -28,7 +29,10 @@ function Calculator() {
       {/*<img src={images} class="background-image"></img>*/}
       <Form class="calc-form"/>
       
-      <Mybutton />
+      <Mybutton calculateFunction={getVal}/>
+      <div className="result">
+        Results goes here
+      </div>
       
     </div>
   );
