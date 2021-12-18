@@ -18,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/mutual-funds" element={<MutualFund />} />
+            <Route path="/calc" element={<Calculator />} />
           </Routes>
 
         </div>
