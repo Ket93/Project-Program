@@ -1,7 +1,6 @@
 import React from 'react';
 import Form from './calcform.js';
 import Mybutton from './button.js';
-import images from '../images/moneystash.png';
 import './Calculator.css';
 
 
@@ -31,7 +30,7 @@ function Calculator() {
       
       <Mybutton calculateFunction={getVal}/>
       <div className="result">
-        Results goes here
+        
       </div>
       
     </div>

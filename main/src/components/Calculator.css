@@ -1,5 +1,7 @@
 h1{
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .Calculator::after {
@@ -71,7 +73,7 @@ input {
 }
 
 .assetsInput {
-    margin-left: 101px;
+    margin-left: 110px;
 }
 
 
@@ -83,7 +85,7 @@ input {
 }
 
 .calc-button {
-    background-color: #569AFF; /* Green */
+    background-color: #569AFF; /* blue */
     border: none;
     color: white;
     padding: 12px 20px;
@@ -97,7 +99,7 @@ input {
 }
 
 .clear-button {
-    background-color: #569AFF; /* Green */
+    background-color: #569AFF; /* blue */
     border: none;
     color: white;
     padding: 12px 20px;
@@ -115,4 +117,8 @@ input {
     border: 2px solid #569AFF;
     color: #569AFF;
     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
-  }
+}
+
+.result {
+    margin-top: 150px;
+}
