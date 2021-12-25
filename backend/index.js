@@ -1,8 +1,73 @@
 const experss = require('express');
 const Joi = require('joi');
-
+const db = require('./db/dbmysql.js');
 const app = experss();
+const cors = require('cors');
+
 app.use(experss.json());
+app.use(cors());
+
+
+
+/*
+Database part
+trying my best to make this all work out
+
+*/
+
+//get info of everything in the database
+app.get('/api/db/stocks', async (req, res)=>{
+    try{
+        let results = await db.all();
+        //console.log(results);
+        res.json(results)
+    }catch(err){
+        //console.log(err);
+        res.status(500).send(err);
+    }
+})
+
+
+//get info from one stock in particular
+app.get('/api/db/stocks/:ticker', async (req, res)=>{
+    try{
+        let results = await db.one(req.params.ticker);
+        //console.log(results);
+
+        //results is undefined aka sql query did nothing useful
+        if (!results){
+            console.log('this');
+            res.status(500).send('Param :ticker is not found in database');
+            return;
+        }
+        
+
+        res.json(results);
+    }catch(err){
+        //console.log(err);
+        res.status(500).send(err);
+    }
+})
+
+
+app.get('/api/db/stocklist', async (req, res)=>{
+    try{
+        let results = await db.all();
+
+        let ans = [];
+        for (let i = 0; i<results.length; i++){
+            ans.push(results[i].ticker);
+        }
+        //console.log(results);
+        res.send(ans);
+    }catch(err){
+        //console.log(err);
+        res.status(500).send(err);
+    }
+})
+
+
+
 
 
 /** mock data for stock prices, pretend that this is in a database and get updated or whatever 
@@ -23,6 +88,21 @@ const stocks = [
 ]
 
 
+//list of all available stocks in the "database"
+app.get('/api/stocks/list', (req, res)=>{
+    let ans = []
+    for (let i = 0; i<stocks.length; i++){
+        ans.push(stocks[i].ticker);
+    }
+    res.send(ans);
+})
+
+//all information of all stocks
+app.get('/api/stocks', (req, res)=>{
+    res.send(stocks);
+})
+
+
 //give stock ticker, get info
 app.get('/api/stocks/:ticker', (req, res) =>{
     const stock = stocks.find(c => c.ticker === req.params.ticker);
@@ -35,6 +115,7 @@ app.get('/api/stocks/:ticker', (req, res) =>{
 
 //testing endpoints + tutorial following
 
+/*
 const courses = [
     {id: 1, name:"course1"},
     {id: 2, name:"course2"},
@@ -78,6 +159,7 @@ app.post('/api/courses', (req, res) =>{
     courses.push(course);
     res.send(course);
 });
+*/
 
 //PORT
 const port = process.env.PORT || 4000;
