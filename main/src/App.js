@@ -2,7 +2,8 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MyNavbar from "./components/Navbar/navbar.js";
 import MutualFund from './components/mutualfund.js';
-import Home from "./components/pages/home.js"
+import Home from "./components/pages/home.js";
+import Calculator from "./components/Calculator.js";
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/mutual-funds" element={<MutualFund />} />
-            <Route path="/calc" element={<Calculator />} />
+            <Route path="/financial-calculator" element={<Calculator />} />
           </Routes>
 
         </div>

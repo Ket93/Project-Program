@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
 
-            <h1 class="title">Financial Assistant</h1>
+            <h1 class="title">Welcome to Investable</h1>
 
             <img src={pic} class="titlePic" />
 
