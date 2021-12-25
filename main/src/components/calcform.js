@@ -39,7 +39,7 @@ handleChange(event){
 // in react component itself as state
 render(){
 	return(
-	<form onSubmit={this.handleSubmit}>
+	<form onSubmit={this.handleSubmit} class="myform">
 		<div>
 		<label htmlFor='Present Value'>Present Value</label>
 		<input
@@ -47,6 +47,7 @@ render(){
 			placeholder='Present Value'
 			value = {this.state.PresentValue}
 			onChange={this.handleChange}
+			class="presentValueInterest"
 		/>
 		</div>
 		<div>
@@ -56,6 +57,7 @@ render(){
 			placeholder='Interest'
 			value={this.state.Interest}
 			onChange={this.handleChange}
+			class="interstInput"
 		/>
 		</div>
 		<div>
@@ -65,6 +67,8 @@ render(){
 			placeholder='Perodic Payments'
 			value={this.state.PerodicPayments}
 			onChange={this.handleChange}
+			class="perodicInput"
+			
 		/>
 		</div>
 		<div>
@@ -74,6 +78,7 @@ render(){
 			placeholder='Number of Periods'
 			value={this.state.NumberofPeriods}
 			onChange={this.handleChange}
+			class="periodsInput"
 		/>
 		</div>
 		<div>
@@ -83,12 +88,10 @@ render(){
 			placeholder='Assets'
 			value={this.state.Assets}
 			onChange={this.handleChange}
+			class="assetsInput"
 		/>
 		</div>
-		<div>
-		<button>Calculate</button>
-		<button>Clear</button>
-		</div>
+		
 	</form>
 	)
 }

@@ -1,0 +1,117 @@
+.spiltScreen{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+.loginSideIMG {
+    height: 60%;
+    margin: 0px;
+}
+
+
+.imgDiv {
+    width: 60%;
+}
+
+
+.loginSideIMG {
+    margin-left: -190px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.emptyDiv {
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+.loginTitle {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.emailText {
+    color: #569AFF; /* blue */
+    font-size: 26px;
+}
+
+.emailInput {
+    margin-top: 16px;
+    height: 40px;
+    width: 460px;
+    margin-bottom: 50px;
+}
+
+.emailInput::placeholder {
+    font-size: 16px;
+}
+
+
+
+
+.passwordText {
+    color: #569AFF; /* blue */
+    font-size: 26px;
+}
+
+.passwordInput {
+    margin-top: 16px;
+    margin-bottom: 50px;
+    height: 40px;
+    width: 460px;
+}
+
+.passwordInput::placeholder {
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+.loginButton {
+    margin-top: 80px;
+    font-size: 26px;
+    border-radius: 20px;
+    background-color: #569AFF; /* blue */
+    border-color: #569AFF;
+    color: white;
+    text-align: center;
+    padding: 10px 190px;
+
+}
+
+
+
+
+
+
+
+
+.bottomText {
+    margin-top: 60px;
+}

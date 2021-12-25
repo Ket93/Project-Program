@@ -1,20 +1,91 @@
 h1{
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-input {
+.Calculator::after {
+    content: "";
+    background: url('../images/moneystash.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-size: 1000px;
+  }
+  ​
+
+.background-image {
+    text-align: center;
+    line-height: 3;
+    vertical-align: text-bottom;
+    margin-top: -100px;
+    background-position: center center;
+
     font-family: Didot;
     font-size: 100%;
 
-    width : 150px;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    height: 100vh;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 0;
+
+    opacity: 0.15;
 }
 
 
-button {
-    background-color: #569AFF; /* Green */
+input {
+    text-align: center;
+
+    width : 160px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+
+}
+
+.myform {
+    text-align: center;
+}
+
+
+
+
+.presentValueInterest {
+    margin-left: 52px;
+}
+
+.interstInput {
+    margin-left: 98px;
+}
+
+.perodicInput {
+    margin-left: 20px;
+}
+
+.periodsInput {
+    margin-left: 17px;
+}
+
+.assetsInput {
+    margin-left: 110px;
+}
+
+
+
+
+.button-div {
+    text-align: center;
+    z-index: 1;
+}
+
+.calc-button {
+    background-color: #569AFF; /* blue */
     border: none;
     color: white;
     padding: 12px 20px;
@@ -23,6 +94,22 @@ button {
     display: inline-block;
     font-size: 16px;
     border-radius: 10px;
+    margin-top: 30px;
+    margin-left: -20px;
+}
+
+.clear-button {
+    background-color: #569AFF; /* blue */
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
 .button:hover {
@@ -30,4 +117,8 @@ button {
     border: 2px solid #569AFF;
     color: #569AFF;
     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
-  }
+}
+
+.result {
+    margin-top: 150px;
+}

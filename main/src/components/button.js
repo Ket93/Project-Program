@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React,{ Component } from 'react'
 
-
-class MyButton extends Component {
-
+class Mybutton extends Component{
     render() {
-
-        const { text, style } = this.props;
-        return <button style={style} >{text}</button>
+        return(
+        <div class="button-div">
+            <button class="calc-button" onClick={this.props.calculateFunction}>Calculate</button>
+            <button class="clear-button" onclick="calcValue()">Clear</button>
+        </div> 
+        )
     }
 }
 
 export default Mybutton
-
